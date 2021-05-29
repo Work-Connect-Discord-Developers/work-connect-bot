@@ -24,4 +24,11 @@ client.on("ready", () => {
   console.log(`Logged in as: ${client.user?.tag}!`);
 });
 
+// Command ping
+client.on("message", (msg) => {
+  if (msg.content.startsWith(`${BOT_PREFIX}ping`)) {
+    msg.channel.send("🚀 POOOONG!");
+  }
+});
+
 client.login(BOT_TOKEN);
