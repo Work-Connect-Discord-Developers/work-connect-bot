@@ -10,6 +10,14 @@ const BOT_TOKEN = process.env.TOKEN;
 
 // Discord Bot
 client.on("ready", () => {
+  // Custom presence
+  client.user.setPresence({
+    activity: {
+      name: "I can see you!",
+      type: "WATCHING",
+    },
+    status: "online",
+  });
   console.log(`Logged in as: ${client.user.tag}!`);
 });
 
