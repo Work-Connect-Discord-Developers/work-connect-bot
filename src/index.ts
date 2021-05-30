@@ -5,8 +5,8 @@ if (process.env.NODE_ENV !== "production") {
   config({ path: `.env.${NODE_ENV}` });
 }
 
-const BOT_PREFIX = process.env.PREFIX;
-const BOT_TOKEN = process.env.TOKEN;
+const BOT_PREFIX: any = process.env.PREFIX;
+const BOT_TOKEN: any = process.env.TOKEN;
 
 // Discord Bot
 import { Client } from "discord.js";
@@ -26,8 +26,23 @@ client.on("ready", () => {
 
 // Command ping
 client.on("message", (msg) => {
-  if (msg.content.startsWith(`${BOT_PREFIX}ping`)) {
-    msg.channel.send("🚀 POOOONG!");
+  if (msg.author.bot) return;
+  if (msg.channel.type === "dm") return;
+  if (!msg.content.startsWith(BOT_PREFIX)) return;
+
+  // Arguments are all messages after prefix and command
+  const ARGUMENTS: string = msg.content;
+  const PREFIX_LENGHT: number = BOT_PREFIX.length;
+  const NO_PREFIX_ARGUMENTS: string = ARGUMENTS.slice(PREFIX_LENGHT);
+  const ARGUMENTS_ARRAY: any = NO_PREFIX_ARGUMENTS.trim().split(/ +/g);
+  const COMMAND: string = ARGUMENTS_ARRAY.shift().toLowerCase();
+
+  // Command Handler
+  try {
+    const COMMAND_FILE = require(`./commands/${COMMAND}`) || null;
+    if (COMMAND_FILE) COMMAND_FILE.default.run(Client, msg, ARGUMENTS_ARRAY);
+  } catch (error) {
+    msg.channel.send("This command does not exist!!");
   }
 });
 
