@@ -19,3 +19,25 @@ PREFIX = your_prefix;
 
 - `token`, the token of the bot available on the [Discord Developers](https://discord.com/developers/applications) section.
 - `prefix`, the prefix that will be set to use the bot.
+
+## Command template
+
+The commands are inside the directory `/src/commands/`, each command has its file `command_name.ts`.
+
+```ts
+const command_name: object = {
+  name: "",
+  aliases: [""],
+  description: "",
+  run: (client: object, msg: any, args: any) => {
+    // Code...
+  },
+};
+
+export default command_name;
+```
+
+- `name`, is the command key and is the same of command name.
+- `aliases`, are other shorter ways to call the command. `Eg: play > p`
+- `description`, information so that the user knows the functionality that this command do.
+- `run`, algorithm for the command work.
