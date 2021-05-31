@@ -39,8 +39,8 @@ client.on("message", (msg) => {
 
   // Command Handler
   try {
-    const COMMAND_FILE = require(`./commands/${COMMAND}`) || null;
-    if (COMMAND_FILE) COMMAND_FILE.default.run(Client, msg, ARGUMENTS_ARRAY);
+    const COMMAND_FILE = require(`./commands/${COMMAND}`);
+    COMMAND_FILE.default.run(Client, msg, ARGUMENTS_ARRAY);
   } catch (error) {
     msg.channel.send("This command does not exist!!");
   }
