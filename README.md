@@ -29,6 +29,7 @@ const command_name: object = {
   name: "",
   aliases: [""],
   description: "",
+  usage: "",
   run: (client: object, msg: any, args: any) => {
     // Code...
   },
