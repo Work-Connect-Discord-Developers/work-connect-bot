@@ -5,8 +5,18 @@ if (process.env.NODE_ENV !== "production") {
   config({ path: `.env.${NODE_ENV}` });
 }
 
-const BOT_PREFIX: any = process.env.PREFIX;
-const BOT_TOKEN: any = process.env.TOKEN;
+const getEnvVar = (value: string): string => {
+  const ret = process.env[value];
+  if (ret === undefined)
+    throw new Error(`${process.env}.${value} is undefined!`);
+  return ret;
+};
+
+const BOT_PREFIX: string = getEnvVar("PREFIX");
+const BOT_TOKEN: string = getEnvVar("TOKEN");
+
+// const BOT_PREFIX: string = process.env.PREFIX;
+// const BOT_TOKEN: string = process.env.TOKEN;
 
 // Discord Bot
 import { Client } from "discord.js";
