@@ -29,6 +29,7 @@ const command_name: object = {
   name: "",
   aliases: [""],
   description: "",
+  usage: "",
   run: (client: object, msg: any, args: any) => {
     // Code...
   },
@@ -40,4 +41,4 @@ export default command_name;
 - `name`, is the command key and is the same of command name.
 - `aliases`, are other shorter ways to call the command. `Eg: play > p`
 - `description`, information so that the user knows the functionality that this command do.
-- `run`, algorithm for the command work.
+- `run`, algorithm for the command can work.

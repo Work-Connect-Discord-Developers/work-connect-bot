@@ -1,8 +1,11 @@
+import { Message } from "discord.js";
+
 const template: object = {
   name: "",
   aliases: [""],
   description: "",
-  run: (client: object, msg: any, args: any) => {
+  usage: "",
+  run: (client: object, msg: Message, args: string[]) => {
     // Code...
   },
 };

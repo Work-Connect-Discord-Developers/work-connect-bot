@@ -1,8 +1,12 @@
+import { Message } from "discord.js";
+
 const ping: object = {
   name: "ping",
   aliases: [""],
   description: "",
-  run: (client: object, msg: any, args: any) => {
+  usage: "",
+  run: (client: object, msg: Message, args: string[]) => {
+    console.log(client)
     msg.channel.send("🚀 POOOONG!");
   },
 };

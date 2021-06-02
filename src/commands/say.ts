@@ -1,8 +1,11 @@
+import { Message } from "discord.js";
+
 const say: object = {
   name: "say",
   aliases: [""],
   description: "",
-  run: (client: object, msg: any, args: any) => {
+  usage: "",
+  run: (client: object, msg: Message, args: string[]) => {
     if (!args[0]) return;
     msg.channel.send(args.join(" "));
   },

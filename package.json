@@ -1,7 +1,7 @@
 {
   "name": "work-connect-bot",
   "version": "1.0.0",
-  "description": "",
+  "description": "Work Connect oficial Discord Bot",
   "main": "index.js",
   "scripts": {
     "start": "npm run build && cross-env NODE_ENV=production node ./dist/index.js",
@@ -12,8 +12,8 @@
     "type": "git",
     "url": "git+https://github.com/work-connect/work-connect-bot.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["nodejs", "firebase", "typescript", "discordjs", "heroku-deployment"],
+  "author": "Work Connect",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/work-connect/work-connect-bot/issues"
