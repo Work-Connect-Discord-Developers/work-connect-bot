@@ -6,7 +6,6 @@ const ping: object = {
   description: "",
   usage: "",
   run: (client: object, msg: Message, args: string[]) => {
-    console.log(client)
     msg.channel.send("🚀 POOOONG!");
   },
 };
