@@ -5,7 +5,7 @@ const ping: object = {
   aliases: [""],
   description: "",
   usage: "",
-  run: (client: object, msg: Message, args: string[]) => {
+  run: (msg: Message, args: string[]) => {
     msg.channel.send("🚀 POOOONG!");
   },
 };

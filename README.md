@@ -35,12 +35,14 @@ FIREBASE_MEASUREMENT_ID=your_firebase_measurement_id
 The commands are inside the directory `/src/commands/`, each command has its file `command_name.ts`.
 
 ```ts
+import { Message } from "discord.js";
+
 const command_name: object = {
   name: "",
   aliases: [""],
   description: "",
   usage: "",
-  run: (client: object, msg: any, args: any) => {
+  run: (msg: Message, args: string[]) => {
     // Code...
   },
 };

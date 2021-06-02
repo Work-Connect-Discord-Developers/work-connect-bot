@@ -5,7 +5,7 @@ const say: object = {
   aliases: [""],
   description: "",
   usage: "",
-  run: (client: object, msg: Message, args: string[]) => {
+  run: (msg: Message, args: string[]) => {
     const MESSAGE = args.join(" ");
     const ARGUMENTS_LEGTH = args.length;
     const NO_ARGUMENTS = ARGUMENTS_LEGTH === 0;
