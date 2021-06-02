@@ -1,5 +1,5 @@
-import discord from "./config/discord"; // Discord Config
 import { Client } from "discord.js";
+import { discord } from "./config/index";
 
 const client: Client = new Client();
 const { BOT_PREFIX, BOT_TOKEN } = discord;
