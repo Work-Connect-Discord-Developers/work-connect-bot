@@ -1,8 +1,26 @@
-import { Client } from "discord.js";
-import { discord } from "./config/index";
+// Environment Variables
+import { config } from "dotenv";
+if (process.env.NODE_ENV !== "production") {
+  const NODE_ENV = process.env.NODE_ENV;
+  config({ path: `.env.${NODE_ENV}` });
+}
 
+const getEnvVar = (value: string): string => {
+  const ret = process.env[value];
+  if (ret === undefined)
+    throw new Error(`${process.env}.${value} is undefined!`);
+  return ret;
+};
+
+const BOT_PREFIX: string = getEnvVar("PREFIX");
+const BOT_TOKEN: string = getEnvVar("TOKEN");
+
+// const BOT_PREFIX: string = process.env.PREFIX;
+// const BOT_TOKEN: string = process.env.TOKEN;
+
+// Discord Bot
+import { Client } from "discord.js";
 const client: Client = new Client();
-const { BOT_PREFIX, BOT_TOKEN } = discord;
 
 client.on("ready", () => {
   // Custom presence
