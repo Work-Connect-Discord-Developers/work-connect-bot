@@ -13,8 +13,18 @@ Now set up your `.evn.development` and run `npm run dev` to test the bot out in 
 Your `.env.development` file would look like this:
 
 ```js
-TOKEN = your_token;
-PREFIX = your_prefix;
+# Dicord Config
+BOT_TOKEN=your_bot_token
+BOT_PREFIX=your_bot_prefix
+
+# Firebase Config
+FIREBASE_API_KEY=your_firebase_api_key
+FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
+FIREBASE_PROJECT_ID=your_firebase_project_id
+FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket
+FIREBASE_MESSAGING_SENDER_ID=your_firebase_messaging_sender_id
+FIREBASE_APP_ID=your_firebase_app_id
+FIREBASE_MEASUREMENT_ID=your_firebase_measurement_id
 ```
 
 - `token`, the token of the bot available on the [Discord Developers](https://discord.com/developers/applications) section.
