@@ -6,8 +6,13 @@ const say: object = {
   description: "",
   usage: "",
   run: (client: object, msg: Message, args: string[]) => {
-    if (!args[0]) return;
-    msg.channel.send(args.join(" "));
+    const MESSAGE = args.join(" ");
+    const ARGUMENTS_LEGTH = args.length;
+    const NO_ARGUMENTS = ARGUMENTS_LEGTH === 0;
+
+    NO_ARGUMENTS
+      ? msg.reply("you must add arguments to your message.")
+      : msg.channel.send(MESSAGE);
   },
 };
 
