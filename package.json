@@ -12,7 +12,13 @@
     "type": "git",
     "url": "git+https://github.com/work-connect/work-connect-bot.git"
   },
-  "keywords": ["nodejs", "firebase", "typescript", "discordjs", "heroku-deployment"],
+  "keywords": [
+    "nodejs",
+    "firebase",
+    "typescript",
+    "discordjs",
+    "heroku-deployment"
+  ],
   "author": "Work Connect",
   "license": "ISC",
   "bugs": {
@@ -22,9 +28,10 @@
   "dependencies": {
     "@types/node": "^15.6.1",
     "cross-env": "^7.0.3",
+    "discord.js": "^12.5.3",
     "dotenv": "^9.0.0",
-    "typescript": "^4.2.4",
-    "discord.js": "^12.5.3"
+    "firebase": "^8.5.0",
+    "typescript": "^4.2.4"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
