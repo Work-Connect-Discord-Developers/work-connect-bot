@@ -2,6 +2,27 @@
 
 This is a **Discord Bot** for the [Work Connect](https://discord.gg/fyGx7BZ) server. It is a bot that counts the hours you work on a task and has other productivity features.
 
+## Scripts
+
+In this project you can run the following Scripts:
+
+### `npm install`
+
+To install the necessary Node modules.
+
+### `npm start`
+
+Run the application in production mode.
+
+### `npm run dev`
+
+Run the application in development mode.
+
+### `npm run build`
+
+Build the production app in the `dist` folder. \
+Compile all TypeScript code.
+
 ## Contribution
 
 To contribute to the project you must create an `issue` with the `feature`, `error`, `build`, `chore`, `documentation`, `refactoring`, `performance`, `test` or whatever you are going to work on.
