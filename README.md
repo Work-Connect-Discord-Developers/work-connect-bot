@@ -44,6 +44,22 @@ To contribute to the project you must create an `issue` with the `feature`, `err
 
 _To name the `commits`, `issues` and `pull requests` we are using the [Conventional Commits](https://www.conventionalcommits.org/) specification, it must follow that structure._
 
+## Keep your Fork updated
+
+When you have the Fork repository cloned on your PC, the first thing you have to do is create a remote to `work-connect/work-connect-bot` using:`git remote add upstream https://github.com/work-connect/work-connect-bot.git` (You only have to do this the first time you clone the repository).
+
+Then every time a change is made in `work-connect/work-connect-bot` and you want to bring it to your fork use the following commands:
+
+1. `git pull upstream dev`
+2. `git push`
+
+**Note:** remember to be located within the branch you wanna update.
+
+As a good practice, it is always recommended to execute these two commands before starting to work, _(just in case there is any change)_:
+
+1. `git pull upstream dev`
+2. `gil pull`
+
 ## Command template
 
 The commands are inside the directory `/src/commands/`, each command has its file `command_name.ts`.
