@@ -2,34 +2,6 @@
 
 This is a **Discord Bot** for the [Work Connect](https://discord.gg/fyGx7BZ) server. It is a bot that counts the hours you work on a task and has other productivity features.
 
-## Installation
-
-This bot runs on `node.js`. Install [Node](https://nodejs.org/) for npm to use.
-
-Run `npm install` in the bot directory and make sure it passes.
-
-Now set up your `.evn.development` and run `npm run dev` to test the bot out in a development environment!
-
-Your `.env.development` file would look like this:
-
-```js
-# Dicord Config
-BOT_TOKEN=your_bot_token
-BOT_PREFIX=your_bot_prefix
-
-# Firebase Config
-FIREBASE_API_KEY=your_firebase_api_key
-FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
-FIREBASE_PROJECT_ID=your_firebase_project_id
-FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket
-FIREBASE_MESSAGING_SENDER_ID=your_firebase_messaging_sender_id
-FIREBASE_APP_ID=your_firebase_app_id
-FIREBASE_MEASUREMENT_ID=your_firebase_measurement_id
-```
-
-- `token`, the token of the bot available on the [Discord Developers](https://discord.com/developers/applications) section.
-- `prefix`, the prefix that will be set to use the bot.
-
 ## Contribution
 
 To contribute to the project you must create an `issue` with the `feature`, `error`, `build`, `chore`, `documentation`, `refactoring`, `performance`, `test` or whatever you are going to work on.
@@ -59,6 +31,34 @@ As a good practice, it is always recommended to execute these two commands befor
 
 1. `git pull upstream dev`
 2. `gil pull`
+
+## Installation
+
+This bot runs on `node.js`. Install [Node](https://nodejs.org/) for npm to use.
+
+Run `npm install` in the bot directory and make sure it passes.
+
+Now set up your `.evn.development` and run `npm run dev` to test the bot out in a development environment!
+
+Your `.env.development` file would look like this:
+
+```js
+# Dicord Config
+BOT_TOKEN=your_bot_token
+BOT_PREFIX=your_bot_prefix
+
+# Firebase Config
+FIREBASE_API_KEY=your_firebase_api_key
+FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
+FIREBASE_PROJECT_ID=your_firebase_project_id
+FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket
+FIREBASE_MESSAGING_SENDER_ID=your_firebase_messaging_sender_id
+FIREBASE_APP_ID=your_firebase_app_id
+FIREBASE_MEASUREMENT_ID=your_firebase_measurement_id
+```
+
+- `token`, the token of the bot available on the [Discord Developers](https://discord.com/developers/applications) section.
+- `prefix`, the prefix that will be set to use the bot.
 
 ## Command template
 
