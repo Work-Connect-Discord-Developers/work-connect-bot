@@ -30,6 +30,20 @@ FIREBASE_MEASUREMENT_ID=your_firebase_measurement_id
 - `token`, the token of the bot available on the [Discord Developers](https://discord.com/developers/applications) section.
 - `prefix`, the prefix that will be set to use the bot.
 
+## Contribution
+
+To contribute to the project you must create an `issue` with the `feature`, `error`, `build`, `chore`, `documentation`, `refactoring`, `performance`, `test` or whatever you are going to work on.
+
+**Steps:**
+
+1. Fork this repository.
+2. Clone the fork repository.
+3. Create a new branch with the name of your feature. _(you must create a branch for each **feature**)_
+4. Make your changes in this branch.
+5. Send your pull request to the `dev` branch.
+
+_To name the `commits`, `issues` and `pull requests` we are using the [Conventional Commits](https://www.conventionalcommits.org/) specification, it must follow that structure._
+
 ## Command template
 
 The commands are inside the directory `/src/commands/`, each command has its file `command_name.ts`.
