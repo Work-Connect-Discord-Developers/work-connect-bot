@@ -2,6 +2,14 @@
 
 This is a **Discord Bot** for the [Work Connect](https://discord.gg/fyGx7BZ) server. It is a bot that counts the hours you work on a task and has other productivity features.
 
+## Table of contents
+
+- [Scripts](#scripts)
+- [Contribution](#contribution)
+- [Keep your Fork updated](#keep-your-fork-updated)
+- [Installation](#installation)
+- [Command template](#command-template)
+
 ## Scripts
 
 In this project you can run the following Scripts:
