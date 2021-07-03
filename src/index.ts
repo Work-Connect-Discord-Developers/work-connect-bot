@@ -24,9 +24,9 @@ client.on("message", (msg) => {
 
   // Arguments are all messages after prefix and command
   const ARGUMENTS: string = msg.content;
-  const PREFIX_LENGHT: number = BOT_PREFIX.length;
-  const NO_PREFIX_ARGUMENTS: string = ARGUMENTS.slice(PREFIX_LENGHT);
-  const ARGUMENTS_ARRAY: any = NO_PREFIX_ARGUMENTS.trim().split(/ +/g);
+  const PREFIX_LENGTH: number = BOT_PREFIX.length;
+  const NO_PREFIX_ARGUMENTS: string = ARGUMENTS.slice(PREFIX_LENGTH);
+  const ARGUMENTS_ARRAY: any[] = NO_PREFIX_ARGUMENTS.trim().split(/ +/g);
   const COMMAND: string = ARGUMENTS_ARRAY.shift().toLowerCase();
 
   // Command Handler
@@ -37,5 +37,8 @@ client.on("message", (msg) => {
     msg.channel.send("This command does not exist!!");
   }
 });
+
+import { readdirSync } from "fs";
+import { join } from "path";
 
 client.login(BOT_TOKEN);
