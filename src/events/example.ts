@@ -1,8 +1,8 @@
-import { Client } from "discord.js";
+import { Event } from "../interfaces";
 
-const event = {
+const event: Event = {
   name: "",
-  run: async (client: Client /*[others parameter]*/) => {
+  run: async (client /*...args*/) => {
     // Event code...
   },
 };

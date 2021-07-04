@@ -1,9 +1,10 @@
-import { Client, Message } from "discord.js";
+import { Message } from "discord.js";
+import { Event } from "../interfaces";
 import { discord } from "../config/index";
 
-const event = {
+const event: Event = {
   name: "message",
-  run: async (client: Client, msg: Message) => {
+  run: async (client, msg: Message) => {
     if (msg.author.bot) return;
     if (msg.channel.type === "dm") return;
     if (!msg.content.startsWith(discord.BOT_PREFIX)) return;

@@ -1,8 +1,8 @@
-import { Client } from "discord.js";
+import { Event } from "../interfaces";
 
-const event = {
+const event: Event = {
   name: "ready",
-  run: async (client: Client) => {
+  run: async (client) => {
     // Custom presence
     client.user?.setPresence({
       activity: {
