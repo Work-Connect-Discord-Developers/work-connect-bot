@@ -1,19 +1,21 @@
-import { Message } from "discord.js";
+import { Command } from "../interfaces";
 
-const say: object = {
+const command: Command = {
   name: "say",
-  aliases: [""],
-  description: "",
+  aliases: [],
+  permissions: [],
   usage: "",
-  run: (msg: Message, args: string[]) => {
+  run: async (client, msg, args) => {
     const MESSAGE = args.join(" ");
-    const ARGUMENTS_LEGTH = args.length;
-    const NO_ARGUMENTS = ARGUMENTS_LEGTH === 0;
+    const ARGUMENTS_LENGTH = args.length;
+    const NO_ARGUMENTS = ARGUMENTS_LENGTH === 0;
 
     NO_ARGUMENTS
-      ? msg.reply("you must add arguments to your message.")
-      : msg.channel.send(MESSAGE);
+      ? msg
+          .reply("you must add arguments to your message.")
+          .catch(console.error)
+      : msg.channel.send(MESSAGE).catch(console.error);
   },
 };
 
-export default say;
+export default command;

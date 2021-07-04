@@ -1,12 +1,14 @@
-import { Message } from "discord.js";
+import { Command } from "../interfaces";
 
-const ping: object = {
+const ping: Command = {
   name: "ping",
-  aliases: [""],
-  description: "",
+  aliases: [],
+  permissions: [],
   usage: "",
-  run: (msg: Message, args: string[]) => {
-    msg.channel.send("🚀 POOOONG!");
+  run: async (client, msg, args) => {
+    msg.channel.send("🚀 POOOONG!").catch(console.error);
+
+    // console.log("pong");
   },
 };
 

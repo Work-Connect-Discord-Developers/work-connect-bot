@@ -19,7 +19,7 @@ const event = {
     // Command Handler
     try {
       const COMMAND_FILE = require(`../commands/${COMMAND}`) || null;
-      if (COMMAND_FILE) COMMAND_FILE.default.run(msg, ARGUMENTS);
+      if (COMMAND_FILE) COMMAND_FILE.default.run(client, msg, ARGUMENTS);
     } catch (error) {
       msg.channel.send("This command does not exist!!");
     }
