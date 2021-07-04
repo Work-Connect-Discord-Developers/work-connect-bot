@@ -3,7 +3,7 @@ import { Command } from "../interfaces";
 const command: Command = {
   name: "say",
   aliases: [],
-  permissions: [],
+  permissions: ["MANAGE_MESSAGES"],
   usage: "",
   run: async (client, msg, args) => {
     const MESSAGE = args.join(" ");

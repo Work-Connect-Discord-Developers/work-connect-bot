@@ -1,6 +1,7 @@
 import { Message } from "discord.js";
 import { Event } from "../interfaces";
 import { discord } from "../config/index";
+import permissionsChecker from "../helpers/permissionsChecker";
 
 const event: Event = {
   name: "message",
@@ -19,10 +20,19 @@ const event: Event = {
 
     // Command Handler
     try {
-      const COMMAND_FILE = require(`../commands/${COMMAND}`) || null;
-      if (COMMAND_FILE) COMMAND_FILE.default.run(client, msg, ARGUMENTS);
+      const COMMAND_FILE = require(`../commands/${COMMAND}`);
+      const userHasPermissions = permissionsChecker(
+        COMMAND_FILE.default.permissions,
+        msg.member?.permissions.toArray()!
+      );
+
+      if (!COMMAND_FILE.default.permissions || userHasPermissions) {
+        COMMAND_FILE.default.run(client, msg, ARGUMENTS);
+      } else {
+        msg.channel.send("You do not have permissions to use this command.");
+      }
     } catch (error) {
-      msg.channel.send("This command does not exist!!");
+      console.error;
     }
   },
 };
