@@ -1,12 +1,14 @@
-import { Command } from "../interfaces";
+import { Command } from '../interfaces';
 
 const command: Command = {
-  name: "avatar",
+  name: 'avatar',
   aliases: [],
   permissions: [],
-  usage: "",
+  usage: '',
   run: async (client, msg, args) => {
-    msg.reply(msg.author.displayAvatarURL());
+    msg
+      .reply(msg.author.displayAvatarURL())
+      .catch((error) => console.error(error));
   },
 };
 
