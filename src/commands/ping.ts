@@ -1,12 +1,19 @@
-import { Command } from "../interfaces";
+import { Command } from '../interfaces';
 
 const ping: Command = {
-  name: "ping",
+  name: 'ping',
   aliases: [],
-  permissions: ["ADMINISTRATOR"],
-  usage: "",
+  permissions: ['ADMINISTRATOR'],
+  usage: '',
   run: async (client, msg, args) => {
-    msg.channel.send("🚀 POOOONG!").catch(console.error);
+    const pingMessage = await msg.channel.send('Loading...');
+    pingMessage
+      .edit(
+        `🚀 Latency is ${
+          pingMessage.createdTimestamp - msg.createdTimestamp
+        }ms. API Latency is ${Math.round(client.ws.ping)}ms`
+      )
+      .catch((error) => console.error(error));
   },
 };
 
