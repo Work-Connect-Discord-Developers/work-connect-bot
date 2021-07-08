@@ -1,4 +1,4 @@
-import { firebase } from '../../config/index';
+import { firebase } from '../config/index';
 import showDocs from './showDocs';
 
 const stopAddingHours = (member: any) => {
