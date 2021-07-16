@@ -1,9 +1,8 @@
-import { firebase } from '../config/index';
+import { discord, firebase } from '../config/index';
 import showDocs from './showDocs';
 
 const stopAddingHours = async (member: any) => {
-  // I must declare this as a global variable and pass it as an argument to the functions that need it
-  const WORKING_ROLE_ID: string = '732242095351529622';
+  const { WORKING_ROLE_ID } = discord;
 
   // remove working role to the user
   await member?.roles.remove(WORKING_ROLE_ID);

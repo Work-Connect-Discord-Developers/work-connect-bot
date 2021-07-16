@@ -1,3 +1,4 @@
+import { discord } from '../config';
 import hasRole from '../helpers/hasRole';
 import { Command } from '../interfaces';
 
@@ -7,8 +8,7 @@ const command: Command = {
   permissions: [],
   usage: '',
   run: async (client, msg, args) => {
-    // I must declare this as a global variable and pass it as an argument to the functions that need it
-    const WORKING_ROLE_ID: string = '732242095351529622';
+    const { WORKING_ROLE_ID } = discord;
 
     if (!args[0]) {
       const isWorking = await hasRole(msg.member, WORKING_ROLE_ID);

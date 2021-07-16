@@ -2,6 +2,7 @@ import { Role } from 'discord.js';
 import { Command } from '../interfaces';
 import addHours from '../helpers/addHours';
 import hasRole from '../helpers/hasRole';
+import { discord } from '../config/index';
 
 const command: Command = {
   name: 'work',
@@ -9,8 +10,7 @@ const command: Command = {
   permissions: [],
   usage: '',
   run: async (client, msg, args) => {
-    // I must declare this as a global variable and pass it as an argument to the functions that need it
-    const WORKING_ROLE_ID: string = '732242095351529622';
+    const { WORKING_ROLE_ID } = discord;
 
     // const isWorking: Role | undefined = msg.member?.roles.cache.find(
     //   (role) => role.id === WORKING_ROLE_ID
