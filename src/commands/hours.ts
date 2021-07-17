@@ -1,12 +1,14 @@
-import { Command } from "../interfaces";
+import { Command } from '../interfaces';
 
 const command: Command = {
-  name: "hours",
+  name: 'hours',
   aliases: [],
   permissions: [],
-  usage: "",
+  usage: '',
   run: async (client, msg, args) => {
-    // Code...
+    msg
+      .reply("this command isn't available yet.")
+      .catch((error) => console.error(error));
   },
 };
 
