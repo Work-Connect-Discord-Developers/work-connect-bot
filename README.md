@@ -9,6 +9,7 @@ This is a **Discord Bot** for the [Work Connect](https://discord.gg/fyGx7BZ) ser
 - [Keep your Fork updated](#keep-your-fork-updated)
 - [Installation](#installation)
 - [Command template](#command-template)
+- [Event Template](#event-template)
 
 ## Scripts
 
@@ -119,3 +120,18 @@ export default command;
 - `permissions`, are the [permissions](https://discord.js.org/#/docs/main/stable/class/Permissions?scrollTo=s-FLAGS) that the user needs to run the command.
 - `usage`, an example of using the command.
 - `run`, algorithm for the command can work.
+
+## Event Template
+
+```ts
+import { Event } from '../interfaces';
+
+const event: Event = {
+  name: '',
+  run: async (client /*...args*/) => {
+    // Event code...
+  },
+};
+
+export default event;
+```

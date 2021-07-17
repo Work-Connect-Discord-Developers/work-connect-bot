@@ -1,7 +1,7 @@
-import { Event } from "../interfaces";
+import { Event } from '../interfaces';
 
 const event: Event = {
-  name: "",
+  name: '',
   run: async (client /*...args*/) => {
     // Event code...
   },
