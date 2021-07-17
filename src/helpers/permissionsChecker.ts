@@ -1,4 +1,4 @@
-import { PermissionString } from "discord.js";
+import { PermissionString } from 'discord.js';
 
 const permissionsChecker = (
   permissions: string[],

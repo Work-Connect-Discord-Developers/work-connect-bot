@@ -1,6 +1,6 @@
 // Environment Variables
-import { config } from "dotenv";
-if (process.env.NODE_ENV !== "production") {
+import { config } from 'dotenv';
+if (process.env.NODE_ENV !== 'production') {
   const NODE_ENV = process.env.NODE_ENV;
   config({ path: `.env.${NODE_ENV}` });
 }

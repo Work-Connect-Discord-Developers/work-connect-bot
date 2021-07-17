@@ -1,7 +1,7 @@
 import { Message } from 'discord.js';
 import { Event } from '../interfaces';
 import { discord } from '../config/index';
-import permissionsChecker from '../helpers/permissionsChecker';
+import { permissionsChecker } from '../helpers';
 
 const event: Event = {
   name: 'message',
@@ -29,7 +29,7 @@ const event: Event = {
       if (!COMMAND_FILE.default.permissions || userHasPermissions) {
         COMMAND_FILE.default.run(client, msg, ARGUMENTS);
       } else {
-        msg.channel.send('You do not have permissions to use this command.');
+        msg.reply('you do not have permissions to use this command.');
       }
     } catch (e) {
       return;
