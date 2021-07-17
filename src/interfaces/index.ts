@@ -1,4 +1,5 @@
-import { Command } from "./command";
-import { Event } from "./event";
+import { Command } from './Command';
+import { Event } from './Event';
+import { FirebaseConfig } from './FirebaseConfig';
 
-export { Event, Command };
+export { Event, Command, FirebaseConfig };

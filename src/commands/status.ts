@@ -1,5 +1,5 @@
 import { discord } from '../config';
-import hasRole from '../helpers/hasRole';
+import { hasRole } from '../helpers';
 import { Command } from '../interfaces';
 
 const command: Command = {

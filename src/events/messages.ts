@@ -1,7 +1,7 @@
 import { Message } from 'discord.js';
 import { Event } from '../interfaces';
 import { discord } from '../config/index';
-import permissionsChecker from './helpers/permissionsChecker';
+import { permissionsChecker } from '../helpers';
 
 const event: Event = {
   name: 'message',

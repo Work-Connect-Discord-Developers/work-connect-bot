@@ -1,5 +1,5 @@
 import { Event } from '../interfaces';
-import stopAddingHours from '../helpers/stopAddingHours';
+import { stopAddingHours } from '../helpers';
 
 const event: Event = {
   name: 'presenceUpdate',

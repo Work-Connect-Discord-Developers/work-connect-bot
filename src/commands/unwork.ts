@@ -1,7 +1,5 @@
-import { Role } from 'discord.js';
 import { Command } from '../interfaces';
-import stopAddingHours from '../helpers/stopAddingHours';
-import hasRole from '../helpers/hasRole';
+import { stopAddingHours, hasRole } from '../helpers';
 import { discord } from '../config';
 
 const command: Command = {

@@ -1,23 +1,16 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore';
-import getEnvVar from './helpers/getEnvVar';
+import { getEnvVar } from '../helpers';
+import { FirebaseConfig } from '../interfaces';
 
-const apiKey = getEnvVar('FIREBASE_API_KEY');
-const authDomain = getEnvVar('FIREBASE_AUTH_DOMAIN');
-const projectId = getEnvVar('FIREBASE_PROJECT_ID');
-const storageBucket = getEnvVar('FIREBASE_STORAGE_BUCKET');
-const messagingSenderId = getEnvVar('FIREBASE_MESSAGING_SENDER_ID');
-const appId = getEnvVar('FIREBASE_APP_ID');
-const measurementId = getEnvVar('FIREBASE_MEASUREMENT_ID');
-
-const firebaseConfig = {
-  apiKey,
-  authDomain,
-  projectId,
-  storageBucket,
-  messagingSenderId,
-  appId,
-  measurementId,
+const firebaseConfig: FirebaseConfig = {
+  apiKey: getEnvVar('FIREBASE_API_KEY'),
+  authDomain: getEnvVar('FIREBASE_AUTH_DOMAIN'),
+  projectId: getEnvVar('FIREBASE_PROJECT_ID'),
+  storageBucket: getEnvVar('FIREBASE_STORAGE_BUCKET'),
+  messagingSenderId: getEnvVar('FIREBASE_MESSAGING_SENDER_ID'),
+  appId: getEnvVar('FIREBASE_APP_ID'),
+  measurementId: getEnvVar('FIREBASE_MEASUREMENT_ID'),
 };
 
 firebase.initializeApp(firebaseConfig);
