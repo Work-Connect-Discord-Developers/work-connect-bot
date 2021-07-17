@@ -1,14 +1,38 @@
-# Work Connect Bot
+# `Work Connect Bot`
 
 This is a **Discord Bot** for the [Work Connect](https://discord.gg/fyGx7BZ) server. It is a bot that counts the hours you work on a task and has other productivity features.
 
-## Table of contents
+# Table of contents
 
+- [Features list](#features-list)
 - [Scripts](#scripts)
 - [Contribution](#contribution)
 - [Keep your Fork updated](#keep-your-fork-updated)
 - [Installation](#installation)
 - [Command template](#command-template)
+- [Event Template](#event-template)
+
+## Features list
+
+This bot is being developed using _JS Discord Library_ together with _TypeScript_ and _Firebase_.
+
+**The handlers that this bot has are:**
+
+- `Events`,receives and digests events and signals from the client.
+- `Commands`, receives and digests commands from the server users.
+
+**The featured commands for this bot are:**
+
+- `Avatar`, show the user avatar.
+- `Hours`, shows the number of hours a user has worked.
+- `Ping`, show the client and API latency.
+- `Ranking`, show job ranking.
+- `Say`, make the bot say what you wanna.
+- `Status`, Shows current status. `Working / Not working`.
+- `Unwork`, stop working and stop counting working hours.
+- `Work`, starts working and counting hours of work.
+
+<!-- Use `!help` to get a full list of available commands. -->
 
 ## Scripts
 
@@ -75,6 +99,7 @@ Your `.env.development` file would look like this:
 # Dicord Config
 BOT_TOKEN=your_bot_token
 BOT_PREFIX=your_bot_prefix
+WORKING_ROLE_ID=your_working_role_id
 
 # Firebase Config
 FIREBASE_API_KEY=your_firebase_api_key
@@ -84,32 +109,52 @@ FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket
 FIREBASE_MESSAGING_SENDER_ID=your_firebase_messaging_sender_id
 FIREBASE_APP_ID=your_firebase_app_id
 FIREBASE_MEASUREMENT_ID=your_firebase_measurement_id
+
 ```
 
 - `token`, the token of the bot available on the [Discord Developers](https://discord.com/developers/applications) section.
 - `prefix`, the prefix that will be set to use the bot.
+- `working-role-id`, role that the user gets when using the `work` command.
 
 ## Command template
 
 The commands are inside the directory `/src/commands/`, each command has its file `command_name.ts`.
 
 ```ts
-import { Message } from "discord.js";
+import { Command } from '../interfaces';
 
-const command_name: object = {
-  name: "",
-  aliases: [""],
-  description: "",
-  usage: "",
-  run: (msg: Message, args: string[]) => {
+const command: Command = {
+  name: '',
+  description: '',
+  aliases: [],
+  permissions: [],
+  usage: '',
+  run: async (client, msg, args) => {
     // Code...
   },
 };
 
-export default command_name;
+export default command;
 ```
 
 - `name`, is the command key and is the same of command name.
 - `aliases`, are other shorter ways to call the command. `Eg: play > p`
 - `description`, information so that the user knows the functionality that this command do.
+- `permissions`, are the [permissions](https://discord.js.org/#/docs/main/stable/class/Permissions?scrollTo=s-FLAGS) that the user needs to run the command.
+- `usage`, an example of using the command.
 - `run`, algorithm for the command can work.
+
+## Event Template
+
+```ts
+import { Event } from '../interfaces';
+
+const event: Event = {
+  name: '',
+  run: async (client /*...args*/) => {
+    // Event code...
+  },
+};
+
+export default event;
+```
