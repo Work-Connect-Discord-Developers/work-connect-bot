@@ -20,7 +20,7 @@ const event: Event = {
 
     // Command Handler
     try {
-      const COMMAND_FILE = require(`../commands/${COMMAND}`);
+      const COMMAND_FILE = await require(`../commands/${COMMAND}`);
       const userHasPermissions = permissionsChecker(
         COMMAND_FILE.default.permissions,
         msg.member?.permissions.toArray()!
@@ -31,8 +31,8 @@ const event: Event = {
       } else {
         msg.reply('you do not have permissions to use this command.');
       }
-    } catch (error) {
-      console.error;
+    } catch (e) {
+      return;
     }
   },
 };
