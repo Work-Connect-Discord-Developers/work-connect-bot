@@ -1,4 +1,4 @@
-import { Client } from "discord.js";
+import { Client } from 'discord.js';
 
 interface Run {
   (client: Client, ...args: any[]): Promise<void>;

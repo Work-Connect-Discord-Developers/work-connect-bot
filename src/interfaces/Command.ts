@@ -1,7 +1,7 @@
-import { Client, Message } from "discord.js";
+import { Client, Message } from 'discord.js';
 
 interface Run {
-  (client: Client, msg: Message, args: string[]): void;
+  (client: Client, msg: Message, args: string[]): Promise<void>;
 }
 
 export interface Command {

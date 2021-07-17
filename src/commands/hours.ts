@@ -1,13 +1,13 @@
 import { Command } from '../interfaces';
 
 const command: Command = {
-  name: 'avatar',
+  name: 'hours',
   aliases: [],
   permissions: [],
   usage: '',
   run: async (client, msg, args) => {
     msg
-      .reply(msg.author.displayAvatarURL())
+      .reply("this command isn't available yet.")
       .catch((error) => console.error(error));
   },
 };
