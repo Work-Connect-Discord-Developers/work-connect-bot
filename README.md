@@ -4,12 +4,35 @@ This is a **Discord Bot** for the [Work Connect](https://discord.gg/fyGx7BZ) ser
 
 # Table of contents
 
+- [Features list](#features-list)
 - [Scripts](#scripts)
 - [Contribution](#contribution)
 - [Keep your Fork updated](#keep-your-fork-updated)
 - [Installation](#installation)
 - [Command template](#command-template)
 - [Event Template](#event-template)
+
+## Features list
+
+This bot is being developed using _JS Discord Library_ together with _TypeScript_ and _Firebase_.
+
+**The handlers that this bot has are:**
+
+- `Events`,receives and digests events and signals from the client.
+- `Commands`, receives and digests commands from the server users.
+
+**The featured commands for this bot are:**
+
+- `Avatar`, show the user avatar.
+- `Hours`, shows the number of hours a user has worked.
+- `Ping`, show the client and API latency.
+- `Ranking`, show job ranking.
+- `Say`, make the bot say what you wanna.
+- `Status`, Shows current status. `Working / Not working`.
+- `Unwork`, stop working and stop counting working hours.
+- `Work`, starts working and counting hours of work.
+
+<!-- Use `!help` to get a full list of available commands. -->
 
 ## Scripts
 
