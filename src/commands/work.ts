@@ -4,9 +4,10 @@ import { discord } from '../config/index';
 
 const command: Command = {
   name: 'work',
+  description: 'Starts working and counting hours of work.',
   aliases: [],
   permissions: [],
-  usage: '',
+  usage: '!work',
   run: async (client, msg, args) => {
     const { WORKING_ROLE_ID } = discord;
 

@@ -2,9 +2,10 @@ import { Command } from '../interfaces';
 
 const command: Command = {
   name: 'ranking',
+  description: 'Show job ranking.',
   aliases: [],
   permissions: [],
-  usage: '',
+  usage: '!ranking [@user_mention]',
   run: async (client, msg, args) => {
     msg
       .reply("this command isn't available yet.")

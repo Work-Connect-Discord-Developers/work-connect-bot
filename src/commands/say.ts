@@ -2,6 +2,7 @@ import { Command } from '../interfaces';
 
 const command: Command = {
   name: 'say',
+  description: '',
   aliases: [],
   permissions: ['MANAGE_MESSAGES'],
   usage: '',

@@ -4,9 +4,10 @@ import { Command } from '../interfaces';
 
 const command: Command = {
   name: 'status',
+  description: 'Shows current status. `Working / Not working`.',
   aliases: [],
   permissions: [],
-  usage: '',
+  usage: '!status [@user_mention]',
   run: async (client, msg, args) => {
     const { WORKING_ROLE_ID } = discord;
 

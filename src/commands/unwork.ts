@@ -4,9 +4,10 @@ import { discord } from '../config';
 
 const command: Command = {
   name: 'unwork',
+  description: 'Stop working and stop counting working hours.',
   aliases: [],
   permissions: [],
-  usage: '',
+  usage: '!unwork',
   run: async (client, msg, args) => {
     const { WORKING_ROLE_ID } = discord;
 

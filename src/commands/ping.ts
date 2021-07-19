@@ -2,9 +2,10 @@ import { Command } from '../interfaces';
 
 const ping: Command = {
   name: 'ping',
+  description: 'Show the client and API latency.',
   aliases: [],
   permissions: ['ADMINISTRATOR'],
-  usage: '',
+  usage: '!ping',
   run: async (client, msg, args) => {
     const pingMessage = await msg.channel.send('Loading...');
     pingMessage
