@@ -1,10 +1,11 @@
-import { Command } from "../interfaces";
+import { Command } from '../interfaces';
 
 const command: Command = {
-  name: "",
+  name: '',
+  description: '',
   aliases: [],
   permissions: [],
-  usage: "",
+  usage: '',
   run: async (client, msg, args) => {
     // Code...
   },
